@@ -4,11 +4,22 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "dev": "ts-node-dev --respawn --transpile-only server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  },
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.1",
+    "prettier": "^3.9.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   },
   "private": true
 }
