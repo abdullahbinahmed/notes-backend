@@ -16,7 +16,7 @@ export interface INoteRepository
 
 export class InMemoryNoteRepository implements INoteRepository {
   async findAll(): Promise<Note[]> {
-    return notes;
+    return [...notes];
   }
   async findById(id: string): Promise<Note | null> {
     const note = notes.find((note) => note.id === id);
